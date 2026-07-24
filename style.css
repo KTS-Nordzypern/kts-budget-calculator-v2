@@ -163,3 +163,215 @@ button:hover{
     margin-top:40px;
 
 }
+
+/* ==========================================
+   PREMIUM ERGEBNISBEREICH
+========================================== */
+
+.result-card{
+    margin-top:40px;
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    border:1px solid #ebe1d2;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.result-title{
+
+    font-family:'Cormorant Garamond',serif;
+    color:#8F724C;
+    font-size:42px;
+    text-align:center;
+    margin-bottom:35px;
+
+}
+
+.stage{
+
+    margin-top:35px;
+    border:1px solid #ede4d6;
+    border-radius:16px;
+    padding:25px;
+    background:#fcfaf7;
+
+}
+
+.stage h3{
+
+    font-family:'Cormorant Garamond',serif;
+    color:#8F724C;
+    font-size:32px;
+    margin-bottom:20px;
+
+}
+
+.cost-row{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:20px;
+
+    padding:18px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.cost-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.cost-left{
+
+    flex:1;
+
+}
+
+.cost-title{
+
+    font-size:17px;
+    font-weight:600;
+
+    color:#3d352e;
+
+}
+
+.cost-description{
+
+    margin-top:4px;
+
+    font-size:13px;
+
+    color:#8a8179;
+
+}
+
+.cost-right{
+
+    text-align:right;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#8F724C;
+
+}
+
+/* Zwischensummen */
+
+.stage-total{
+
+    margin-top:25px;
+
+    padding-top:20px;
+
+    border-top:2px solid #d8c8b0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-weight:700;
+
+    font-size:22px;
+
+    color:#8F724C;
+
+}
+
+/* Gesamtbudget */
+
+.grand-total{
+
+    margin-top:40px;
+
+    background:#8F724C;
+
+    color:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    text-align:center;
+
+}
+
+.grand-total h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+    color:white;
+
+}
+
+.grand-total .price{
+
+    font-size:42px;
+
+    font-weight:700;
+
+}
+
+/* Renditebox */
+
+.roi-box{
+
+    margin-top:35px;
+
+    background:#f8f5ef;
+
+    border-left:5px solid #8F724C;
+
+    padding:22px;
+
+    border-radius:12px;
+
+}
+
+.roi-box h3{
+
+    color:#8F724C;
+
+    margin-bottom:12px;
+
+}
+
+.roi-value{
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+/* Hinweis */
+
+.notice{
+
+    margin-top:35px;
+
+    padding:20px;
+
+    background:#faf7f2;
+
+    border-radius:12px;
+
+    color:#6f665f;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+}
