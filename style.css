@@ -375,3 +375,43 @@ button:hover{
     line-height:1.7;
 
 }
+/* ==========================================
+   INFO BUTTONS
+========================================== */
+
+.info{
+
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+
+    width:20px;
+    height:20px;
+
+    margin-left:6px;
+
+    border-radius:50%;
+
+    background:#b99767;
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    vertical-align:middle;
+
+}
+
+.info:hover{
+
+    background:#8F724C;
+
+    transform:scale(1.08);
+
+}
