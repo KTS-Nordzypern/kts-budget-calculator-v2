@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KTS Budget- & Renditerechner</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="hero">
+
+    <img src="logo.png" class="logo" alt="KTS Logo">
+
+    <h1>BUDGET- & RENDITERECHNER</h1>
+
+    <p>
+        Berechnen Sie Ihr Gesamtbudget für Ihre Immobilie in Nordzypern –
+        transparent, einfach und unverbindlich.
+    </p>
+
+    <img src="header.png" class="heroimg" alt="Nordzypern">
+
+</header>
+
+
+<main class="card">
+
+<h2>Budget berechnen</h2>
+
+<label>Kaufpreis (€)</label>
+<input
+type="number"
+id="price"
+placeholder="z.B. 250000">
+
+<label>Immobilienart</label>
+
+<select id="propertyType">
+
+<option value="new">
+Neubau
+</option>
+
+<option value="resale">
+Bestandsimmobilie
+</option>
+
+</select>
+
+
+<label>Nutzung</label>
+
+<select id="usage">
+
+<option value="investment">
+Kapitalanlage
+</option>
+
+<option value="self">
+Eigennutzung
+</option>
+
+</select>
+
+
+<div id="rentField">
+
+<label>Erwartete Monatsmiete (€)</label>
+
+<input
+type="number"
+id="rent"
+placeholder="optional">
+
+</div>
+
+
+<button onclick="calc()">
+
+Budget berechnen
+
+</button>
+
+
+<div id="result">
+
+</div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
