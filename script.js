@@ -107,7 +107,7 @@ function calc() {
 
         <div class="stage">
 
-            <h3>Stage 1 – Vertragsunterzeichnung</h3>
+           <h3>Phase 1 – Beim Kaufvertrag</h3>
 
            <div class="cost-row">
     <div class="cost-left">
@@ -168,13 +168,19 @@ function calc() {
                 <div class="cost-left">
 
                     <div class="cost-title">
-                        Ministry of Interior Fee <span class="info">i</span>
-                    </div>
+    Gebühr des Innenministeriums
+    <span class="info" onclick="toggleInfo('ministryInfo')">i</span>
+</div>
 
-                    <div class="cost-description">
-                        Festbetrag
-                    </div>
+<div id="ministryInfo" class="info-box">
+    <strong>Gebühr des Innenministeriums</strong><br><br>
+    Diese Verwaltungsgebühr fällt im Rahmen der Kaufabwicklung an.
+    Für diese Berechnung wird ein Beispielwert von <strong>600 €</strong> verwendet.
+</div>
 
+<div class="cost-description">
+    Beispielwert: 600 €
+</div>
                 </div>
 
                 <div class="cost-right">
