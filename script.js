@@ -123,43 +123,90 @@ function calc() {
             Für diese Berechnung wird standardmäßig der niedrigste Satz von
             <strong>0,5 %</strong> verwendet.
         </div>
+let resultHTML = `
 
-       <div class="cost-description">
-    0,5–1 % (berechnet mit 0,5 %)
-</div>
+<div class="result-card">
+
+    <h2 class="result-title">
+        Ihre Nebenkostenübersicht
+    </h2>
+
+    <div class="stage">
+
+        <h3>Phase 1 – Beim Kaufvertrag</h3>
+
+        <div class="cost-row">
+
+            <div class="cost-left">
+
+                <div class="cost-title">
+                    Stempelsteuer
+                    <span class="info" onclick="toggleInfo('stampInfo')">i</span>
+                </div>
+
+                <div class="cost-description">
+                    0,5–1 % (berechnet mit 0,5 %)
+                </div>
+
+            </div>
+
+            <div class="cost-right">
+                ${formatEuro(stampDuty)}
+            </div>
+
+        </div>
+
+        <div id="stampInfo" class="info-box">
+
+            <strong>Stempelsteuer</strong><br><br>
+
+            Die Stempelsteuer fällt beim Kaufvertrag an und beträgt derzeit zwischen
+            <strong>0,5 % und 1 %</strong> des Kaufpreises.
+
+            Für diese Berechnung wird standardmäßig der niedrigste Satz von
+            <strong>0,5 %</strong> verwendet.
+
+        </div>
 
                 <div class="cost-right">
                     ${formatEuro(stampDuty)}
                 </div>
             </div>
 
-            <div class="cost-row">
-                <div class="cost-left">
-                    <div class="cost-title">
-                      Grundbuchgebühr (1. Teil) <span class="info" onclick="toggleInfo('transferInfo')">i</span>
-                    </div>
+           <div class="cost-row">
 
-                    <div id="transferInfo" class="info-box">
+    <div class="cost-left">
+
+        <div class="cost-title">
+            Grundbuchgebühr (1. Teil)
+            <span class="info" onclick="toggleInfo('transferInfo')">i</span>
+        </div>
+
+        <div class="cost-description">
+            6 % des Kaufpreises
+        </div>
+
+    </div>
+
+    <div class="cost-right">
+        ${formatEuro(transferStage1)}
+    </div>
+
+</div>
+
+<div id="transferInfo" class="info-box">
+
     <strong>Grundbuchgebühr</strong><br><br>
 
     Die Grundbuchgebühr wird bei der Eigentumsübertragung fällig.
 
-    Für eine bessere Übersicht wird sie in diesem Rechner in zwei
-    Zahlungsphasen dargestellt.
+    Zur besseren Übersicht wird sie in diesem Rechner auf zwei Zahlungsphasen aufgeteilt.
 
-    Zunächst werden <strong>6 %</strong> berechnet und später die
-    restlichen <strong>3 %</strong>.
+    In Phase 1 werden <strong>6&nbsp;%</strong> berechnet.
+
+    Die restlichen <strong>3&nbsp;%</strong> werden in Phase 2 ausgewiesen.
+
 </div>
-
-                   <div class="cost-description">
-    6 % des Kaufpreises
-</div>
-
-                </div>
-
-                <div class="cost-right">
-                    ${formatEuro(transferStage1)}
-                </div>
 
             </div>
 
@@ -172,22 +219,39 @@ function calc() {
     <span class="info" onclick="toggleInfo('ministryInfo')">i</span>
 </div>
 
-<div id="ministryInfo" class="info-box">
-    <strong>Gebühr des Innenministeriums</strong><br><br>
-    Diese Verwaltungsgebühr fällt im Rahmen der Kaufabwicklung an.
-    Für diese Berechnung wird ein Beispielwert von <strong>600 €</strong> verwendet.
-</div>
+
 
 <div class="cost-description">
     Beispielwert: 600 €
 </div>
                 </div>
+       
 
                 <div class="cost-right">
                     ${formatEuro(ministryFee)}
                 </div>
 
             </div>
+
+                    <div class="cost-right">
+    ${formatEuro(ministryFee)}
+</div>
+
+</div>
+
+<div id="ministryInfo" class="info-box">
+
+    <strong>Gebühr des Innenministeriums</strong><br><br>
+
+    Diese Verwaltungsgebühr fällt im Rahmen der Kaufabwicklung an.
+
+    Für diesen Rechner wird ein Beispielwert von
+    <strong>600 €</strong> verwendet.
+
+    Der tatsächliche Betrag kann je nach Vorgaben und Zeitpunkt der Antragstellung abweichen.
+
+</div>
+
 
             <div class="stage-total">
 
@@ -200,79 +264,117 @@ function calc() {
         </div>
 
 
-        <div class="stage">
+      <div class="stage">
 
-            <h3>Stage 2 – Eigentumsübertragung</h3>
+    <h3>Phase 2 – Eigentumsübertragung</h3>
 
-            <div class="cost-row">
+    <div class="cost-row">
 
-                <div class="cost-left">
+        <div class="cost-left">
 
-                    <div class="cost-title">
-                        Remaining Transfer Fee <span class="info">i</span>
-                    </div>
-
-                    <div class="cost-description">
-                        3 %
-                    </div>
-
-                </div>
-
-                <div class="cost-right">
-                    ${formatEuro(transferStage2)}
-                </div>
-
+            <div class="cost-title">
+                Grundbuchgebühr (2. Teil)
+                <span class="info" onclick="toggleInfo('transfer2Info')">i</span>
             </div>
 
-            <div class="cost-row">
-
-                <div class="cost-left">
-
-                    <div class="cost-title">
-                        VAT <span class="info">i</span>
-                    </div>
-
-                    <div class="cost-description">
-                        Standardmäßig 5 %
-                    </div>
-
-                </div>
-
-                <div class="cost-right">
-                    ${formatEuro(vat)}
-                </div>
-
-            </div>
-
-            <div class="cost-row">
-
-                <div class="cost-left">
-
-                    <div class="cost-title">
-                        Municipality Contribution <span class="info">i</span>
-                    </div>
-
-                    <div class="cost-description">
-                        Beispielwert
-                    </div>
-
-                </div>
-
-                <div class="cost-right">
-                    ${formatEuro(municipalityFee)}
-                </div>
-
-            </div>
-
-            <div class="stage-total">
-
-                <span>Zwischensumme Stage 2</span>
-
-                <span>${formatEuro(stage2Total)}</span>
-
+            <div class="cost-description">
+                Restliche 3 % des Kaufpreises
             </div>
 
         </div>
+
+        <div class="cost-right">
+            ${formatEuro(transferStage2)}
+        </div>
+
+    </div>
+
+    <div id="transfer2Info" class="info-box">
+
+        <strong>Grundbuchgebühr (2. Teil)</strong><br><br>
+
+        Nach Abschluss der Eigentumsübertragung wird der zweite Teil der
+        Grundbuchgebühr fällig.
+
+        In diesem Rechner werden hierfür
+        <strong>3 % des Kaufpreises</strong> angesetzt.
+
+    </div>
+
+    <div class="cost-row">
+
+        <div class="cost-left">
+
+            <div class="cost-title">
+                Mehrwertsteuer (MwSt.)
+                <span class="info" onclick="toggleInfo('vatInfo')">i</span>
+            </div>
+
+            <div class="cost-description">
+                Standardmäßig 5 %
+            </div>
+
+        </div>
+
+        <div class="cost-right">
+            ${formatEuro(vat)}
+        </div>
+
+    </div>
+
+    <div id="vatInfo" class="info-box">
+
+        <strong>Mehrwertsteuer</strong><br><br>
+
+        Bei Neubauten fällt in Nordzypern in der Regel eine
+        Mehrwertsteuer an.
+
+        Für diese Berechnung wird ein Satz von
+        <strong>5 %</strong> verwendet.
+
+    </div>
+
+    <div class="cost-row">
+
+        <div class="cost-left">
+
+            <div class="cost-title">
+                Gemeindeabgabe
+                <span class="info" onclick="toggleInfo('municipalityInfo')">i</span>
+            </div>
+
+            <div class="cost-description">
+                Beispielwert
+            </div>
+
+        </div>
+
+        <div class="cost-right">
+            ${formatEuro(municipalityFee)}
+        </div>
+
+    </div>
+
+    <div id="municipalityInfo" class="info-box">
+
+        <strong>Gemeindeabgabe</strong><br><br>
+
+        Je nach Gemeinde können zusätzliche Gebühren
+        für die Eigentumsübertragung anfallen.
+
+        Im Rechner wird hierfür ein Beispielwert verwendet.
+
+    </div>
+
+    <div class="stage-total">
+
+        <span>Zwischensumme Phase 2</span>
+
+        <span>${formatEuro(stage2Total)}</span>
+
+    </div>
+
+</div>
                 <div class="grand-total">
 
             <h2>Gesamtbudget</h2>
