@@ -141,12 +141,24 @@ function calc() {
             <div class="cost-row">
                 <div class="cost-left">
                     <div class="cost-title">
-                        Partial Land Registry Transfer Fee <span class="info">i</span>
+                      Grundbuchgebühr (1. Teil) <span class="info" onclick="toggleInfo('transferInfo')">i</span>
                     </div>
 
-                    <div class="cost-description">
-                        6 %
-                    </div>
+                    <div id="transferInfo" class="info-box">
+    <strong>Grundbuchgebühr</strong><br><br>
+
+    Die Grundbuchgebühr wird bei der Eigentumsübertragung fällig.
+
+    Für eine bessere Übersicht wird sie in diesem Rechner in zwei
+    Zahlungsphasen dargestellt.
+
+    Zunächst werden <strong>6 %</strong> berechnet und später die
+    restlichen <strong>3 %</strong>.
+</div>
+
+                   <div class="cost-description">
+    6 % des Kaufpreises
+</div>
 
                 </div>
 
