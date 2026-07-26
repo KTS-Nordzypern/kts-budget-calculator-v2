@@ -124,14 +124,9 @@ function calc() {
             <strong>0,5 %</strong> verwendet.
         </div>
 
-        <div class="cost-description">
-            0,5 % des Kaufpreises
-        </div>
-    </div>
-                    <div class="cost-description">
-                        0,5–1 % (berechnet mit 0,5 %)
-                    </div>
-                </div>
+       <div class="cost-description">
+    0,5–1 % (berechnet mit 0,5 %)
+</div>
 
                 <div class="cost-right">
                     ${formatEuro(stampDuty)}
