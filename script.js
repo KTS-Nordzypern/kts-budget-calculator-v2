@@ -109,11 +109,25 @@ function calc() {
 
             <h3>Stage 1 – Vertragsunterzeichnung</h3>
 
-            <div class="cost-row">
-                <div class="cost-left">
-                    <div class="cost-title">
-                        Stamp Duty <span class="info">i</span>
-                    </div>
+           <div class="cost-row">
+    <div class="cost-left">
+        <div class="cost-title">
+            Stempelsteuer
+            <span class="info" onclick="toggleInfo('stampInfo')">i</span>
+        </div>
+
+        <div id="stampInfo" class="info-box">
+            <strong>Stempelsteuer</strong><br><br>
+            Die Stempelsteuer fällt beim Kaufvertrag an und beträgt derzeit zwischen
+            <strong>0,5 % und 1 %</strong> des Kaufpreises.
+            Für diese Berechnung wird standardmäßig der niedrigste Satz von
+            <strong>0,5 %</strong> verwendet.
+        </div>
+
+        <div class="cost-description">
+            0,5 % des Kaufpreises
+        </div>
+    </div>
                     <div class="cost-description">
                         0,5–1 % (berechnet mit 0,5 %)
                     </div>
@@ -335,5 +349,13 @@ function calc() {
     `;
 
     document.getElementById("result").innerHTML = resultHTML;
+
+}
+
+function toggleInfo(id){
+
+    const box = document.getElementById(id);
+
+    box.classList.toggle("show");
 
 }
