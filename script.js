@@ -112,7 +112,7 @@ function calc() {
             <div class="cost-row">
                 <div class="cost-left">
                     <div class="cost-title">
-                        Stamp Duty <span class="info">ℹ️</span>
+                        Stamp Duty <span class="info">i</span>
                     </div>
                     <div class="cost-description">
                         0,5–1 % (berechnet mit 0,5 %)
@@ -127,7 +127,7 @@ function calc() {
             <div class="cost-row">
                 <div class="cost-left">
                     <div class="cost-title">
-                        Partial Land Registry Transfer Fee <span class="info">ℹ️</span>
+                        Partial Land Registry Transfer Fee <span class="info">i</span>
                     </div>
 
                     <div class="cost-description">
@@ -147,7 +147,7 @@ function calc() {
                 <div class="cost-left">
 
                     <div class="cost-title">
-                        Ministry of Interior Fee <span class="info">ℹ️</span>
+                        Ministry of Interior Fee <span class="info">i</span>
                     </div>
 
                     <div class="cost-description">
@@ -182,7 +182,7 @@ function calc() {
                 <div class="cost-left">
 
                     <div class="cost-title">
-                        Remaining Transfer Fee <span class="info">ℹ️</span>
+                        Remaining Transfer Fee <span class="info">i</span>
                     </div>
 
                     <div class="cost-description">
@@ -202,7 +202,7 @@ function calc() {
                 <div class="cost-left">
 
                     <div class="cost-title">
-                        VAT <span class="info">ℹ️</span>
+                        VAT <span class="info">i</span>
                     </div>
 
                     <div class="cost-description">
@@ -222,7 +222,7 @@ function calc() {
                 <div class="cost-left">
 
                     <div class="cost-title">
-                        Municipality Contribution <span class="info">ℹ️</span>
+                        Municipality Contribution <span class="info">i</span>
                     </div>
 
                     <div class="cost-description">
