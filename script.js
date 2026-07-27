@@ -49,7 +49,9 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 function calc(){
 
-    const purchasePrice=Number(document.getElementById("price").value);
+    const purchasePrice = Number(
+    document.getElementById("price").value.replace(/\./g, "")
+);
 
     if(!purchasePrice||purchasePrice<=0){
 
@@ -393,6 +395,17 @@ resultHTML += `
 document.getElementById("result").innerHTML = resultHTML;
 }
 
+function toggleInfo(id){
+
+    const box = document.getElementById(id);
+
+    if(box){
+
+        box.classList.toggle("show");
+
+    }
+
+}
 function toggleInfo(id){
 
     const box = document.getElementById(id);
