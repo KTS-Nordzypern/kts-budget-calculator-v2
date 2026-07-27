@@ -133,22 +133,7 @@ function calc() {
 
         </div>
 
-        <div id="stampInfo" class="info-box">
-
-            <strong>Stempelsteuer</strong><br><br>
-
-            Die Stempelsteuer fällt beim Kaufvertrag an und beträgt derzeit zwischen
-            <strong>0,5 % und 1 %</strong> des Kaufpreises.
-
-            Für diese Berechnung wird standardmäßig der niedrigste Satz von
-            <strong>0,5 %</strong> verwendet.
-
-        </div>
-
-                <div class="cost-right">
-                    ${formatEuro(stampDuty)}
-                </div>
-            </div>
+     
 
            <div class="cost-row">
 
