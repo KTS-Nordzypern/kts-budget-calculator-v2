@@ -12,26 +12,26 @@ function formatEuro(value){
 
 }
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
-    const usage=document.getElementById("usage");
-    const rentField=document.getElementById("rentField");
+    const usage = document.getElementById("usage");
+    const rentField = document.getElementById("rentField");
 
-    function toggleRent(){
+    function toggleRent() {
 
-        if(!usage||!rentField) return;
+        if (!usage || !rentField) return;
 
-        if(usage.value==="investment"){
+        if (usage.value === "investment") {
 
-            rentField.style.display="block";
+            rentField.style.display = "block";
 
-        }else{
+        } else {
 
-            rentField.style.display="none";
+            rentField.style.display = "none";
 
-            const rent=document.getElementById("rent");
+            const rent = document.getElementById("rent");
 
-            if(rent) rent.value="";
+            if (rent) rent.value = "";
 
         }
 
@@ -39,9 +39,26 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     toggleRent();
 
-    if(usage){
+    if (usage) {
+        usage.addEventListener("change", toggleRent);
+    }
 
-        usage.addEventListener("change",toggleRent);
+    const priceInput = document.getElementById("price");
+
+    if (priceInput) {
+
+        priceInput.addEventListener("input", function () {
+
+            let value = this.value.replace(/\D/g, "");
+
+            if (!value) {
+                this.value = "";
+                return;
+            }
+
+            this.value = Number(value).toLocaleString("de-DE");
+
+        });
 
     }
 
