@@ -314,6 +314,7 @@ function calc(){
     </div>
 
 </div>
+`;
 // ============================
 // Rendite (nur Kapitalanlage)
 // ============================
