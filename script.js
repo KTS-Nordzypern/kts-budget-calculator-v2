@@ -123,32 +123,9 @@ function calc() {
             Für diese Berechnung wird standardmäßig der niedrigste Satz von
             <strong>0,5 %</strong> verwendet.
         </div>
-let resultHTML = `
 
-<div class="result-card">
 
-    <h2 class="result-title">
-        Ihre Nebenkostenübersicht
-    </h2>
 
-    <div class="stage">
-
-        <h3>Phase 1 – Beim Kaufvertrag</h3>
-
-        <div class="cost-row">
-
-            <div class="cost-left">
-
-                <div class="cost-title">
-                    Stempelsteuer
-                    <span class="info" onclick="toggleInfo('stampInfo')">i</span>
-                </div>
-
-                <div class="cost-description">
-                    0,5–1 % (berechnet mit 0,5 %)
-                </div>
-
-            </div>
 
             <div class="cost-right">
                 ${formatEuro(stampDuty)}
