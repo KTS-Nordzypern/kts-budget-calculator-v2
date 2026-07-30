@@ -90,20 +90,18 @@ function calc(){
 
     const vat=purchasePrice*0.05;
 
-    const ministryFee=600;
+  const lawyerFee = 1500;
+const municipalityFee = 150;
 
-    const municipalityFee=150;
+  const stage1Total =
+    purchasePrice +
+    stampDuty +
+    transferStage1 +
+    lawyerFee;
 
-    const stage1Total=
-        purchasePrice+
-        stampDuty+
-        transferStage1+
-        ministryFee;
-
-    const stage2Total=
-        transferStage2+
-        vat+
-        municipalityFee;
+   const stage2Total =
+    transferStage2 +
+    vat;
 
     const totalBudget=
         stage1Total+
@@ -184,31 +182,25 @@ function calc(){
 
             <div class="cost-left">
 
-                <div class="cost-title">
-                    Gebühr des Innenministeriums
-                    <span class="info" onclick="toggleInfo('ministryInfo')">i</span>
-                </div>
+              <div class="cost-row">
 
-                <div class="cost-description">
-                    Beispielwert
-                </div>
+    <div class="cost-left">
 
-            </div>
-
-            <div class="cost-right">
-                ${formatEuro(ministryFee)}
-            </div>
-
+        <div class="cost-title">
+            Anwaltskosten
         </div>
 
-        <div id="ministryInfo" class="info-box">
-
-            <strong>Gebühr des Innenministeriums</strong><br><br>
-
-            Für den Rechner wird ein Beispielwert
-            von <strong>600 €</strong> verwendet.
-
+        <div class="cost-description">
+            Fester Pauschalbetrag
         </div>
+
+    </div>
+
+    <div class="cost-right">
+        ${formatEuro(lawyerFee)}
+    </div>
+
+</div>
 
         <div class="stage-total">
 
@@ -283,36 +275,7 @@ function calc(){
 
     </div>
 
-    <div class="cost-row">
 
-        <div class="cost-left">
-
-            <div class="cost-title">
-                Gemeindeabgabe
-                <span class="info" onclick="toggleInfo('municipalityInfo')">i</span>
-            </div>
-
-            <div class="cost-description">
-                Beispielwert
-            </div>
-
-        </div>
-
-        <div class="cost-right">
-            ${formatEuro(municipalityFee)}
-        </div>
-
-    </div>
-
-    <div id="municipalityInfo" class="info-box">
-
-        <strong>Gemeindeabgabe</strong><br><br>
-
-        Je nach Gemeinde können zusätzliche Gebühren entstehen.
-
-        Im Rechner wird hierfür ein Beispielwert verwendet.
-
-    </div>
 
     <div class="stage-total">
 
