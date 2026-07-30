@@ -178,11 +178,7 @@ const municipalityFee = 150;
 
         </div>
 
-        <div class="cost-row">
-
-            <div class="cost-left">
-
-              <div class="cost-row">
+    <div class="cost-row">
 
     <div class="cost-left">
 
@@ -201,6 +197,7 @@ const municipalityFee = 150;
     </div>
 
 </div>
+       
 
         <div class="stage-total">
 
