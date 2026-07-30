@@ -246,7 +246,7 @@ function calc(){
         <div class="cost-left">
 
             <div class="cost-title">
-                Mehrwertsteuer (MwSt.)
+                Mehrwertsteuer (MwSt. / VAT 5 %)
                 <span class="info" onclick="toggleInfo('vatInfo')">i</span>
             </div>
 
