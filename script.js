@@ -91,7 +91,6 @@ function calc(){
     const vat=purchasePrice*0.05;
 
   const lawyerFee = 1500;
-const municipalityFee = 150;
 
   const stage1Total =
     purchasePrice +
@@ -372,17 +371,6 @@ resultHTML += `
 document.getElementById("result").innerHTML = resultHTML;
 }
 
-function toggleInfo(id){
-
-    const box = document.getElementById(id);
-
-    if(box){
-
-        box.classList.toggle("show");
-
-    }
-
-}
 function toggleInfo(id){
 
     const box = document.getElementById(id);
